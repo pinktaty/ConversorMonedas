@@ -32,8 +32,11 @@ public class Vista {
         System.out.println(RED + "Ha ocurrido un error al intentarse conectar con la API.");
     }
 
-    public void imprimirRespuesta(double respuesta){
-        System.out.println("La cantidad convertida es de " + GREEN + respuesta);
+    public void imprimirRespuesta(String monedaBase, String monedaFinal, double cantidad, double respuesta){
+        System.out.println(
+                "**************\n" + "Se ha convertido la cantidad de " + cantidad + " en moneda " + monedaBase + " a" +
+                        " " + GREEN + respuesta + WHITE + " " + monedaFinal + "\n**************"
+        );
     }
 
 }

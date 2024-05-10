@@ -1,12 +1,12 @@
 public class Controlador {
     private Vista vista;
     // Modelo
-    private RecibirRespuestas receptor;
+    private ReceptorRespuestas receptor;
     private ManejadorRespuestaAPI conector;
 
     public Controlador() {
         vista = new Vista();
-        receptor = new RecibirRespuestas();
+        receptor = new ReceptorRespuestas();
         conector = new ManejadorRespuestaAPI();
     }
 
@@ -27,16 +27,16 @@ public class Controlador {
                         break;
                     }
                 }
-                Conversor conversor = conector.conectarConAPI(receptor.obtenerMonedaBase());
+                String auxMonedaBase = receptor.obtenerMonedaBase();
+                Conversor conversor = conector.conectarConAPI(auxMonedaBase);
                 if(conversor == null){
                     vista.errorConversor();
                     break;
                 }
-                vista.imprimirRespuesta(
-                        conversor.convertir(
-                                receptor.obtenerMonedaFinal()
-                                , receptor.obtenerCantidad()
-                                ));
+                String auxMonedaFinal = receptor.obtenerMonedaFinal();
+                double auxCantidad = receptor.obtenerCantidad();
+                double auxRespuesta =  conversor.convertir(auxMonedaFinal, auxCantidad);
+                vista.imprimirRespuesta(auxMonedaBase, auxMonedaFinal, auxCantidad, auxRespuesta);
             }
         }
     }

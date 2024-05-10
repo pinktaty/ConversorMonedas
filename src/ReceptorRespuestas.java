@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RecibirRespuestas {
+public class ReceptorRespuestas {
     int eleccion = -1;
     double cantidad = -1;
 
