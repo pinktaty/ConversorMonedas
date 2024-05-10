@@ -9,6 +9,10 @@ public class ManejadorRespuestaAPI {
 
         String llaveAPI = ""; // Llave API eliminada por seguridad
 
+        if(llaveAPI.equals("")){
+            return null;
+        }
+
         HttpClient cliente = HttpClient.newHttpClient();
         HttpRequest solicitud = HttpRequest.newBuilder()
                 .uri(URI.create("https://v6.exchangerate-api.com/v6/" + llaveAPI + "/latest/" + monedaBase))
@@ -23,7 +27,7 @@ public class ManejadorRespuestaAPI {
             return transformador.transformar(json);
 
         } catch (Exception e){
-            System.out.println(e.getMessage());
+            System.out.println(e);
         }
         return null;
     }

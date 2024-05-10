@@ -35,7 +35,7 @@ public class Controlador {
                 }
                 String auxMonedaFinal = receptor.obtenerMonedaFinal();
                 double auxCantidad = receptor.obtenerCantidad();
-                double auxRespuesta =  conversor.convertir(auxMonedaFinal, auxCantidad);
+                double auxRespuesta = conversor.convertir(auxMonedaFinal, auxCantidad);
                 vista.imprimirRespuesta(auxMonedaBase, auxMonedaFinal, auxCantidad, auxRespuesta);
             }
         }

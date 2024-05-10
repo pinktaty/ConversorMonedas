@@ -29,7 +29,9 @@ public class Vista {
     }
 
     public void errorConversor(){
-        System.out.println(RED + "Ha ocurrido un error al intentarse conectar con la API.");
+        System.out.println(RED + "Ha ocurrido un error al intentarse conectar con la API." + "\nAsegurate de haber " +
+                "ingresado tu llave personal a la variable \'llave API\' en la clase \'ManejadorRespuestaAPI\'." +
+                "\nPuedes sacar tu llave personal en: https://www.exchangerate-api.com/");
     }
 
     public void imprimirRespuesta(String monedaBase, String monedaFinal, double cantidad, double respuesta){
