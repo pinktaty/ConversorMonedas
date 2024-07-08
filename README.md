@@ -9,22 +9,22 @@ This layered organization facilitates separation of concerns and promotes a modu
 ## Structure
 
 ### Entry Point
-./src/Main.java: Program's entry point.
+- ./src/Main.java: Program's entry point.
 
 ### Model
-./src/RecibirRespuestas.java: Class responsible for receiving and storing user input data.
+- ./src/RecibirRespuestas.java: Class responsible for receiving and storing user input data.
 
-./src/ManejadorRespuestaAPIr.java: Class responsible for establishing connection with ExchangeRate-API and handling its response.
+- ./src/ManejadorRespuestaAPIr.java: Class responsible for establishing connection with ExchangeRate-API and handling its response.
 
-./src/ManejadorGson.java: Class responsible for using the Gson library.
+- ./src/ManejadorGson.java: Class responsible for using the Gson library.
 
-./src/Conversor.java: Template class for converting the Json object with the help of the Gson library.
+- ./src/Conversor.java: Template class for converting the Json object with the help of the Gson library.
 
 ### View
-./src/Vista.java: Class containing all the outputs that the user will see in the console.
+- ./src/Vista.java: Class containing all the outputs that the user will see in the console.
 
 ### Controller
-./src/Controlador.java: Class managing the connection between the program's view and model.
+- ./src/Controlador.java: Class managing the connection between the program's view and model.
 
 * * *
 
@@ -37,19 +37,19 @@ Para la estructura del programa, se ha aplicado el patrón de diseño Modelo Vis
 Esta organización en capas facilita la separación de responsabilidades y promueve una estructura modular, lo que simplifica el mantenimiento y la ampliación del programa en el futuro. Al aprovechar la funcionalidad proporcionada por la API ExchangeRate-API y la capacidad de serialización y deserialización de datos de Gson, el programa ofrece conversiones precisas y eficientes de manera confiable.
 
 ## Estructura
-./src/Main.java: Punto de entrada del programa.
+- ./src/Main.java: Punto de entrada del programa.
 
 ### Modelo
-./src/RecibirRespuestas.java: Clase que se encarga de recibir y almacenar los datos ingresados por el usuario.
+- ./src/RecibirRespuestas.java: Clase que se encarga de recibir y almacenar los datos ingresados por el usuario.
 
-./src/ManejadorRespuestaAPI.java: Clase que se encarga de llevar a cabo la conexión con ExchangeRate-API y de manejar la respuesta de la misma.
+- ./src/ManejadorRespuestaAPI.java: Clase que se encarga de llevar a cabo la conexión con ExchangeRate-API y de manejar la respuesta de la misma.
 
-./src/ManejadorGson.java: Clase que se encarga de usar la biblioteca Gson.
+- ./src/ManejadorGson.java: Clase que se encarga de usar la biblioteca Gson.
 
-./src/Conversor.java: Clase plantilla a la que se convertirá el objeto Json con ayuda de la bibliote Gson.
+- ./src/Conversor.java: Clase plantilla a la que se convertirá el objeto Json con ayuda de la bibliote Gson.
 
 ### Vista
-./src/Vista.java: Clase que contiene todos los outputs que el usuario verá en la consola.
+- ./src/Vista.java: Clase que contiene todos los outputs que el usuario verá en la consola.
 
 ### Controlador
-./src/Controlador.java: Clase que maneja la conexión entre la vista y el modelo del programa.
+- ./src/Controlador.java: Clase que maneja la conexión entre la vista y el modelo del programa.
